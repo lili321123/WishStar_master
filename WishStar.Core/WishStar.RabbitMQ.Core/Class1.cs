@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WishStar.RabbitMQ.Core
+namespace WishStar.MsgQueue.Core
 {
     public class Class1
     {
