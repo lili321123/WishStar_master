@@ -11,18 +11,17 @@ namespace WishStar.Caching.Core
 
         string StringGet(CacheKeyCode cacheCode, Func<string> fun = null);
 
-        IEnumerable<T> MGet<T>(List<CacheKeyCode> cacheCodes, Func<Dictionary<CacheKeyCode, T>> fun = null);
+        IEnumerable<T> MGet<T>(List<CacheKeyCode> cacheCodes);
 
         void Set(CacheKeyCode cacheCode, object data);
 
         void Remove(CacheKeyCode cacheCode);
 
-        void RemoveByPattern(string pattern);
-
-        void RemoveAll();
+        void RemoveByPattern(string cacheType, string pattern);
+        
 
         bool KeyExpire(CacheKeyCode cacheCode);
 
-        void IsExist(CacheKeyCode cacheCode);
+        bool IsExist(CacheKeyCode cacheCode);
     }
 }

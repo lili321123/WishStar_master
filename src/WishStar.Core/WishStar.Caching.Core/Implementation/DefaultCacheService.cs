@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WishStar.Caching.Core.Common;
 using WishStar.Web.Framework.Engine.Implementation;
+using System.Linq;
 
 namespace WishStar.Caching.Core.Implementation
 {
@@ -38,51 +39,93 @@ namespace WishStar.Caching.Core.Implementation
                 perRequestCache.Set(cacheKey, result, cacheCode.CacheTime);
                 return result;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                //log
             }
+            return default(T);
         }
 
-        public void IsExist(CacheKeyCode cacheCode)
+        public bool IsExist(CacheKeyCode cacheCode)
         {
-            throw new NotImplementedException();
+            string cacheKey = cacheCode.ToString();
+            var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+            return cacheProvider.IsExist(cacheKey);
+
         }
 
         public bool KeyExpire(CacheKeyCode cacheCode)
         {
-            throw new NotImplementedException();
+            string cacheKey = cacheCode.ToString();
+            var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+            return cacheProvider.KeyExpire(cacheKey, DateTime.Now.AddMinutes(cacheCode.CacheTime));
         }
 
-        public IEnumerable<T> MGet<T>(List<CacheKeyCode> cacheCodes, Func<Dictionary<CacheKeyCode, T>> fun = null)
+        public IEnumerable<T> MGet<T>(List<CacheKeyCode> cacheCodes)
         {
-            throw new NotImplementedException();
+            if (cacheCodes == null || !cacheCodes.Any())
+            {
+                return null;
+            }
+            var cacheCode = cacheCodes.First();
+            List<string> keys = cacheCodes.Select(x => x.ToString()).ToList();
+            var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+            Dictionary<string, T> partialResult = cacheProvider.MGet<T>(keys);
+            return partialResult.Values;
         }
 
         public void Remove(CacheKeyCode cacheCode)
         {
-            throw new NotImplementedException();
+            string cacheKey = cacheCode.ToString();
+            var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+            cacheProvider.Remove(cacheKey);
         }
+        
 
-        public void RemoveAll()
+        public void RemoveByPattern(string cacheType,string pattern)
         {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveByPattern(string pattern)
-        {
-            throw new NotImplementedException();
+            var cacheProvider = this.GetCacheProvider(cacheType);
+            cacheProvider.RemoveByPattern(pattern);
         }
 
         public void Set(CacheKeyCode cacheCode, object data)
         {
-            throw new NotImplementedException();
+            string cacheKey = cacheCode.ToString();
+            var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+            perRequestCache.Set(cacheKey, data, cacheCode.CacheTime);
+            cacheProvider.Set(cacheKey, data, cacheCode.CacheTime);
         }
 
         public string StringGet(CacheKeyCode cacheCode, Func<string> fun = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (cacheCode == null)
+                {
+                    return fun.Invoke();
+                }
+                string cacheKey = cacheCode.ToString();
+                string result = perRequestCache.StringGet(cacheKey);
+                var cacheProvider = this.GetCacheProvider(cacheCode.CacheType);
+                if (string.IsNullOrWhiteSpace(result))
+                {
+                    result = cacheProvider.StringGet(cacheKey);
+                }
+
+                if (string.IsNullOrWhiteSpace(result))
+                {
+                    result = fun.Invoke();
+                    cacheProvider.Set(cacheKey, result, cacheCode.CacheTime);
+                }
+
+                perRequestCache.Set(cacheKey, result, cacheCode.CacheTime);
+                return result;
+            }
+            catch (Exception e)
+            {
+                //log
+            }
+            return string.Empty;
         }
 
         private ICacheProvider GetCacheProvider(string cacheType)

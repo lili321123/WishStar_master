@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar_master", "WishStar_master\WishStar_master.csproj", "{7C815277-6849-4D95-A2C9-2FFE47F041B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar_master", "WishStar_master\WishStar_master.csproj", "{7C815277-6849-4D95-A2C9-2FFE47F041B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WishStar.Libraries", "WishStar.Libraries", "{B0B03A7F-36A0-46C0-B291-D609BB5B31AD}"
 EndProject
@@ -11,27 +11,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WishStar.Core", "WishStar.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WishStar.Test", "WishStar.Test", "{C555940B-9C55-443C-BC07-2AF06311C40C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar_master.Test", "src\WishStar.Test\WishStar_master.Test\WishStar_master.Test.csproj", "{35D44BB8-1719-41A5-8242-4FF1E64141E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar_master.Test", "src\WishStar.Test\WishStar_master.Test\WishStar_master.Test.csproj", "{35D44BB8-1719-41A5-8242-4FF1E64141E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Common", "src\WishStar.Libraries\WishStar.Common\WishStar.Common.csproj", "{0D79C456-1137-421E-BCC3-1A4864340F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Common", "src\WishStar.Libraries\WishStar.Common\WishStar.Common.csproj", "{0D79C456-1137-421E-BCC3-1A4864340F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Data", "src\WishStar.Libraries\WishStar.Data\WishStar.Data.csproj", "{F41ED4C5-A31C-420D-9538-4B309C175AD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Data", "src\WishStar.Libraries\WishStar.Data\WishStar.Data.csproj", "{F41ED4C5-A31C-420D-9538-4B309C175AD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Service", "src\WishStar.Libraries\WishStar.Service\WishStar.Service.csproj", "{A44CEFBB-8118-48CC-B1FC-3CD55A44AB2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Service", "src\WishStar.Libraries\WishStar.Service\WishStar.Service.csproj", "{A44CEFBB-8118-48CC-B1FC-3CD55A44AB2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Caching.Core", "src\WishStar.Core\WishStar.Caching.Core\WishStar.Caching.Core.csproj", "{5746BE73-2D32-4367-877D-21758057B660}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Caching.Core", "src\WishStar.Core\WishStar.Caching.Core\WishStar.Caching.Core.csproj", "{5746BE73-2D32-4367-877D-21758057B660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Elasticsearch.Core", "src\WishStar.Core\WishStar.Elasticsearch.Core\WishStar.Elasticsearch.Core.csproj", "{0B8A5546-AE4D-4629-9CCE-5EB5A7EF2CD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Elasticsearch.Core", "src\WishStar.Core\WishStar.Elasticsearch.Core\WishStar.Elasticsearch.Core.csproj", "{0B8A5546-AE4D-4629-9CCE-5EB5A7EF2CD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Format.Core", "src\WishStar.Core\WishStar.Format.Core\WishStar.Format.Core.csproj", "{1E4D433F-6623-4A7C-A317-F9B11D5A34C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Format.Core", "src\WishStar.Core\WishStar.Format.Core\WishStar.Format.Core.csproj", "{1E4D433F-6623-4A7C-A317-F9B11D5A34C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.MongoDB.Core", "src\WishStar.Core\WishStar.MongoDB.Core\WishStar.MongoDB.Core.csproj", "{C09C07AD-73D2-4472-83F7-D4065A0737DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.MongoDB.Core", "src\WishStar.Core\WishStar.MongoDB.Core\WishStar.MongoDB.Core.csproj", "{C09C07AD-73D2-4472-83F7-D4065A0737DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.RabbitMQ.Core", "src\WishStar.Core\WishStar.RabbitMQ.Core\WishStar.RabbitMQ.Core.csproj", "{BA91C922-CCD8-4816-9BC0-BC17934E689D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.RabbitMQ.Core", "src\WishStar.Core\WishStar.RabbitMQ.Core\WishStar.RabbitMQ.Core.csproj", "{BA91C922-CCD8-4816-9BC0-BC17934E689D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.WebSocket.Core", "src\WishStar.Core\WishStar.WebSocket.Core\WishStar.WebSocket.Core.csproj", "{0E3256C1-1F64-447D-A861-557DED7FF67C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.WebSocket.Core", "src\WishStar.Core\WishStar.WebSocket.Core\WishStar.WebSocket.Core.csproj", "{0E3256C1-1F64-447D-A861-557DED7FF67C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Web.Framework", "src\WishStar.Web.Framework\WishStar.Web.Framework.csproj", "{A1FA2DE1-8271-4385-B44B-E999BAE49A57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishStar.Web.Framework", "src\WishStar.Web.Framework\WishStar.Web.Framework.csproj", "{A1FA2DE1-8271-4385-B44B-E999BAE49A57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishStar.Log4net.Core", "src\WishStar.Core\WishStar.Log4net.Core\WishStar.Log4net.Core.csproj", "{CA91D4AD-6028-4BF6-A37B-5CF84516CD84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{A1FA2DE1-8271-4385-B44B-E999BAE49A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1FA2DE1-8271-4385-B44B-E999BAE49A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1FA2DE1-8271-4385-B44B-E999BAE49A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA91D4AD-6028-4BF6-A37B-5CF84516CD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA91D4AD-6028-4BF6-A37B-5CF84516CD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA91D4AD-6028-4BF6-A37B-5CF84516CD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA91D4AD-6028-4BF6-A37B-5CF84516CD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{C09C07AD-73D2-4472-83F7-D4065A0737DA} = {D830D08D-15C9-4941-ABD7-9B0A7834509E}
 		{BA91C922-CCD8-4816-9BC0-BC17934E689D} = {D830D08D-15C9-4941-ABD7-9B0A7834509E}
 		{0E3256C1-1F64-447D-A861-557DED7FF67C} = {D830D08D-15C9-4941-ABD7-9B0A7834509E}
+		{CA91D4AD-6028-4BF6-A37B-5CF84516CD84} = {D830D08D-15C9-4941-ABD7-9B0A7834509E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2201CCA-A03B-43AF-B150-0F3CDB383A4A}
