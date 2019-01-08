@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 
 namespace WishStar.Format.Core.JsonConvert
 {
-    public class JsonHelper
+    public static class JsonHelper
     {
         /// <summary>
         /// 时间转换器
